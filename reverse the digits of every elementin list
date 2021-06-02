@@ -1,0 +1,16 @@
+#reverse the each and every element in the list
+def reverse_digits(n):
+    s=0
+    while n:
+        r=n%10
+        n//=10
+        s=s*10+r
+    return s
+def reverseofdigit(n,data):
+    for i in range(len(data)):
+        data[i]=reverse_digits(data[i])
+    return data
+n=int(input())
+data=list(map(int,input().split()))
+reverseofdigit(n,data)
+print(*data)
