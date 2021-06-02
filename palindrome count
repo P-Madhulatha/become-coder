@@ -1,0 +1,17 @@
+def pali_count(n):
+    temp=n
+    rev=0
+    while n:
+        r=n%10
+        n//=10
+        rev=rev*10+r
+    return rev==temp
+def palindromecount(n,data):
+    pc=0
+    for i in range(len(data)):
+        if pali_count(data[i]):
+            pc=pc+1
+    return pc
+n=int(input())
+data=list(map(int,input().split()))
+print(palindromecount(n,data))
