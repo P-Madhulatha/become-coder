@@ -1,0 +1,15 @@
+def original(n,data):
+    k=[]
+    c=0
+    for i in data:
+        if i not in k:
+            k.append(i)
+    k=list(set(data))
+    for i in range(len(k)):
+        if data[i]==k[i]:
+            c+=1
+    return c
+n=int(input())
+data=list(map(int,input().split()))
+c=original(n,data)
+print(c)
