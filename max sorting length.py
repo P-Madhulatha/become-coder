@@ -1,15 +1,15 @@
-def max_sorted_length(n,data):#1 2 3 4 5 4 3 2 6 5 9
+def max_sorted_length(n,data):
     c=1
     mc=0
-    for i in range(n-1):#1 2 3 4 5 4 3 2 6 5 9
-        if data[i]<data[i+1]:#5<4
-            c+=1#c=3
+    for i in range(n-1):
+        if data[i]<data[i+1]:
+            c+=1
         else:
-            if mc<c:#0<5
-                mc=c#c=0
+            if mc<c:
+                mc=c
             c=1
-    if mc<c:#0<2
-        return c#2
+    if mc<c:
+        return c
     return mc
 n=int(input())
 data=list(map(int,input().split()))
