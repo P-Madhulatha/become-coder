@@ -1,4 +1,4 @@
-"""def bouncy(n,data):
+def bouncy(n,data):
     l=data[0]
     h=data[1]
     if l>h:
@@ -20,7 +20,7 @@
             
 n=int(input())
 data=list(map(int,input().split()))
-print(bouncy(n,data))"""
+print(bouncy(n,data))
 
 #another one
 def bouncy(n,data):#1 4 2 3 4
